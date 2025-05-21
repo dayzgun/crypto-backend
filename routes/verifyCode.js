@@ -5,7 +5,8 @@ const pool = require('../utils/db')
 const router = express.Router()
 
 router.post('/', async (req, res) => {
-  const { username, code } = req.body
+  const { username, verification_code } = req.body
+  const code = verification_code
 
   try {
     // 1️⃣ Buscamos al usuario por username + código
